@@ -11,6 +11,8 @@ function removeDuplicateCharacters(string) {
   }
   console.log(removeDuplicateCharacters('baraban'));
 
+  //____________________________________________________
+
   const makeUnique = (string) => {
     let arr = string.split('')
     let uniqueArray = []
@@ -23,3 +25,14 @@ function removeDuplicateCharacters(string) {
   }
   
   console.log(makeUnique('helloworld'))
+
+  //__________________________________________________________
+
+  let removeDuplicate = (string) => string.split("").reduce((s, c) => {
+    if (s) {
+     if (s.indexOf(c) === -1) return s + c;
+    }
+    return s;
+  });
+ 
+  console.log(removeDuplicate("helloworld"));
